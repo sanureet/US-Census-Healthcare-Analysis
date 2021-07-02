@@ -71,8 +71,29 @@ d3.csv("./assets/data/data.csv").then(function(StatesData) {
     .attr("cx", d => xLinearScale(d.poverty))
     .attr("cy", d => yLinearScale(d.healthcare))
     .attr("r", "15")
-    .attr("fill", "pink")
-    .attr("opacity", ".5");
+    .attr("fill", "blue")
+    .attr("opacity", ".5")
+    .attr("class", "stateCircle");
+
+    // 5 part 2: 
+    var circlesText = chartGroup.selectAll("circle")
+    .data(StatesData)
+    .enter()
+    
+      .append("text")
+      // add text abbv.
+      .text(d => d.abbr)
+      // need to use scale
+      .attr("dx", d => xLinearScale(d.poverty))
+      .attr("dy", d => yLinearScale(d.healthcare))
+      .attr("font-size", 15)
+      .attr("fill", "light blue")
+      .attr("stroke", "black")
+      // .attr("class", "stateText")
+      .attr("r", 3);
+
+
+    
 
     // Step 6: Initialize tool tip
     // ==============================
