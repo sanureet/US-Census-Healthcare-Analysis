@@ -76,7 +76,7 @@ d3.csv("./assets/data/data.csv").then(function(StatesData) {
     .attr("class", "stateCircle");
 
     // 5 part 2: 
-    var circlesText = chartGroup.selectAll("circle")
+    var circlesText = chartGroup.selectAll("text")
     .data(StatesData)
     .enter()
     
@@ -84,13 +84,13 @@ d3.csv("./assets/data/data.csv").then(function(StatesData) {
       // add text abbv.
       .text(d => d.abbr)
       // need to use scale
-      .attr("dx", d => xLinearScale(d.poverty))
-      .attr("dy", d => yLinearScale(d.healthcare))
+      .attr("x", d => xLinearScale(d.poverty))
+      .attr("y", d => yLinearScale(d.healthcare))
       .attr("font-size", 15)
-      .attr("fill", "light blue")
-      .attr("stroke", "black")
+      // .attr("fill", "light blue")
+      .attr("stroke", "black");
       // .attr("class", "stateText")
-      .attr("r", 3);
+      // .attr("r", 3);
 
 
     
