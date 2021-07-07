@@ -43,7 +43,7 @@ function loadChart() {
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 
-  // Import Data
+  // Import Data from csv file
   d3.csv("./assets/data/data.csv").then(function (StatesData) {
 
     // Step 1: Parse Data/Cast as numbers
