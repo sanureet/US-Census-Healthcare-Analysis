@@ -76,6 +76,7 @@ function loadChart() {
     // ==============================
     chartGroup.append("g")
       .attr("transform", `translate(0, ${height})`)
+      .style("font-size", "16px")
       .call(bottomAxis);
 
     chartGroup.append("g")
