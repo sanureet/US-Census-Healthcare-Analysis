@@ -108,7 +108,7 @@ function loadChart() {
       .attr("y", d => yLinearScale(d.healthcare) + 5)
       .attr("font-size", 13)
       // .attr("fill", "light blue")
-      .attr("stroke", "black")
+      .attr("stroke", "blue")
       .html(function (d) {
         return (`${d.abbr}`)
       })
