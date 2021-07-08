@@ -161,3 +161,4 @@ function loadChart() {
     console.log(error);
   });
 }
+// finished code
