@@ -80,6 +80,7 @@ function loadChart() {
       .call(bottomAxis);
 
     chartGroup.append("g")
+      .style("font-size", "16px")
       .call(leftAxis);
 
     // Step 5: Create Circles
